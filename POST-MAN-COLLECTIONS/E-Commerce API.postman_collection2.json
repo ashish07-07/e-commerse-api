@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "0d7c057b-64a6-4874-8bf2-8d1466071a50",
+		"name": "E-Commerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29595217"
+	},
+	"item": [
+		{
+			"name": "Creating products with varients",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"walking shoes  \",\r\n  \"description\": \"Lightweight running shoes for active lifestyles\",\r\n  \"price\": 79.99,\r\n  \"variants\": [\r\n    { \"name\": \"Size 9\", \"sku\": \"RUN-9\", \"additionalCost\": 0, \"stockCount\": 25 },\r\n    { \"name\": \"Size 10\", \"sku\": \"RUN-10\", \"additionalCost\": 0, \"stockCount\": 30 }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/po",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"po"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletes the product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/65bcad942d7f864496c34e3c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"65bcad942d7f864496c34e3c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the products and the varients",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"gym indoor non marking shoes \",\r\n  \"description\": \"Lightweight running shoes for active lifestyles\",\r\n  \"price\": 79.99,\r\n  \"variants\": [\r\n    { \"name\": \"Size 9\", \"sku\": \"RUN-9\", \"additionalCost\": 0, \"stockCount\": 25 },\r\n    { \"name\": \"Size 10\", \"sku\": \"RUN-10\", \"additionalCost\": 0, \"stockCount\": 30 }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/65bcb14d2d7f864496c34e45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"65bcb14d2d7f864496c34e45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getsthe produts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/search?query=updated",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "updated"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
